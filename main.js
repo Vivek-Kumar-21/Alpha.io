@@ -232,11 +232,17 @@ function init() {
     createMentorCards();
     displayMentors();
     populateMentorSelect();
+
+    // Set today's date as the minimum selectable date
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('session-date').setAttribute('min', today);
+
     document.getElementById('booking-form').addEventListener('submit', handleFormSubmit);
     document.getElementById("mentor-select").addEventListener("change", populateTimeSlots);
     loadTestimonials(); // Load testimonials on page load
     document.getElementById("login-form").addEventListener("submit", handleLogin);
     document.getElementById("register-form").addEventListener("submit", handleRegistration);
     document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
-    document.getElementById('feedback-form').addEventListener('submit')
+    document.getElementById('feedback-form').addEventListener('submit', handleFeedbackSubmit);
 }
+
