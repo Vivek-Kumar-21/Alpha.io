@@ -1,229 +1,199 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --card-background: #fff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-  
-  .nav-links li {
-    margin-left: 1.5rem;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: var(--secondary-color);
-  }
-  
-  .hero {
-    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), url('https://source.unsplash.com/random/1600x900/?university') no-repeat center center/cover;
-    height: 60vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background-color: #27ae60;
-  }
-  
-  .mentors {
-    padding: 4rem 0;
-  }
-  
-  .mentors h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
+  --primary-color: #2C3E50;      /* Dark Blue */
+  --secondary-color: #18BC9C;    /* Teal */
+  --accent-color: #E67E22;        /* Vibrant Orange */
+  --background-color: #ECF0F1;    /* Light Gray */
+  --text-color: #34495E;          /* Dark Gray */
+  --card-background: #ffffff;      /* White */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+.hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/random/1600x900/?university') no-repeat center center/cover;
+  height: 60vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.mentors {
+  padding: 4rem 0;
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.mentor-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px);
+}
+
+.mentor-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mentor-info {
+  padding: 1.5rem;
+}
+
+.mentor-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.mentor-info p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.mentor-info .expertise {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.booking-section {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+#booking-form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 4rem;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  background-color: white;
+  border-left: 5px solid var(--primary-color);
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.testimonial:hover {
+  transform: scale(1.02);
+}
+
+/* Calendar Styles */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.calendar div {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.calendar div.available {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.calendar div.not-available {
+  background-color: #f4f4f4;
+  color: #999;
+}
+
+@media (max-width: 768px) {
   .mentor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .mentor-card {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  .mentor-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .mentor-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .mentor-info {
-    padding: 1.5rem;
-  }
-  
-  .mentor-info h3 {
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-  }
-  
-  .mentor-info p {
-    color: #666;
-    margin-bottom: 0.5rem;
-  }
-  
-  .mentor-info .expertise {
-    font-weight: 600;
-    color: var(--secondary-color);
-  }
-  
-  .mentor-info .experience {
-    font-style: italic;
-  }
-  
-  .mentor-info .specialties {
-    font-size: 0.9rem;
-  }
-  
-  .booking-section {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 4rem 0;
-    text-align: center;
-  }
-  
-  .booking-section h2 {
-    margin-bottom: 2rem;
-  }
-  
-  #booking-form {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 2rem;
-    max-width: 500px;
-    margin: 0 auto;
-    color: var(--text-color);
-  }
-  
-  #booking-form h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
-  .form-group input,
-  .form-group select {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 4rem;
-  }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .mentor-grid {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
   }
+}
+
