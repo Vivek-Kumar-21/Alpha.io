@@ -196,6 +196,37 @@ function handleRegistration(event) {
     alert("Registration functionality not implemented yet."); // Placeholder alert
 }
 
+// Function to handle review form submission
+function handleReviewSubmit(event) {
+    event.preventDefault();
+    const reviewName = document.getElementById('review-name').value || 'Anonymous';
+    const reviewText = document.getElementById('review-text').value;
+
+    const reviewList = document.getElementById('review-list');
+    const reviewItem = document.createElement('div');
+    reviewItem.className = 'testimonial'; // Using the same style as testimonials
+    reviewItem.innerHTML = `<strong>${reviewName}:</strong> ${reviewText}`;
+    reviewList.appendChild(reviewItem);
+
+    // Reset the form
+    document.getElementById('review-form').reset();
+}
+
+// Function to handle feedback form submission
+function handleFeedbackSubmit(event) {
+    event.preventDefault();
+    const feedbackText = document.getElementById('feedback-text').value;
+
+    const feedbackList = document.getElementById('feedback-list');
+    const feedbackItem = document.createElement('div');
+    feedbackItem.className = 'testimonial'; // Using the same style as testimonials
+    feedbackItem.innerHTML = `<strong>Anonymous:</strong> ${feedbackText}`;
+    feedbackList.appendChild(feedbackItem);
+
+    // Reset the form
+    document.getElementById('feedback-form').reset();
+}
+
 // Initialize the application
 function init() {
     createMentorCards();
@@ -203,12 +234,9 @@ function init() {
     populateMentorSelect();
     document.getElementById('booking-form').addEventListener('submit', handleFormSubmit);
     document.getElementById("mentor-select").addEventListener("change", populateTimeSlots);
-    document.getElementById("search-bar").addEventListener("keyup", filterMentors);
     loadTestimonials(); // Load testimonials on page load
     document.getElementById("login-form").addEventListener("submit", handleLogin);
     document.getElementById("register-form").addEventListener("submit", handleRegistration);
+    document.getElementById('review-form').addEventListener('submit', handleReviewSubmit);
+    document.getElementById('feedback-form').addEventListener('submit')
 }
-
-// Run the initialization when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", init);
-
