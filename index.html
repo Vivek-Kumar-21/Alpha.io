@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLIET Mentorship Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">SLIET Mentorship</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#mentors">Mentors</a></li>
+          <li><a href="#booking">Book a Session</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Welcome to SLIET Mentorship Platform</h1>
+          <p>Connect with expert faculty mentors to guide you through your academic and career journey.</p>
+          <a href="#booking" class="btn">Book a Session</a>
+        </div>
+      </section>
+
+      <section id="mentors" class="mentors container">
+        <h2>Our Mentors</h2>
+        <div class="mentor-grid" id="mentor-grid">
+          <!-- Mentor cards will be dynamically added here -->
+        </div>
+      </section>
+
+      <section id="booking" class="booking-section">
+        <div class="container">
+          <h2>Book a Mentorship Session</h2>
+          <form id="booking-form">
+            <h3>Schedule Your Session</h3>
+            <div class="form-group">
+              <label for="student-name">Your Name</label>
+              <input type="text" id="student-name" required>
+            </div>
+            <div class="form-group">
+              <label for="student-email">Your Email</label>
+              <input type="email" id="student-email" required>
+            </div>
+            <div class="form-group">
+              <label for="mentor-select">Select a Mentor</label>
+              <select id="mentor-select" required>
+                <option value="Dr. Birmohan Singh(Prof)">Choose a mentor</option>
+                <option value="">
+                    Dr. Birmohan Singh(Prof)</option>
+                <option value="Dr. Damanpreet Singh(Prof)">Dr. Damanpreet Singh(Prof)</option>
+                <option value="Dr. Major Singh Goraya(Prof)">Dr. Major Singh Goraya(Prof)</option>
+                <option value="Dr. Manoj Sachan(Prof)">Dr. Manoj Sachan(Prof)</option>
+                <option value="Dr. Gurjinder Kaur(Prof)">Dr. Gurjinder Kaur(Prof)</option>
+                <option value="Dr. Amar Nath(Asst Prof)">
+                    Dr. Amar Nath(Asst Prof)</option>
+                <option value="Dr. Jagdeep Singh(Asst Prof)">Dr. Jagdeep Singh(Asst Prof)</option>
+                <option value="Dr. Manminder Singh(Asst Prof)">
+                    Dr. Manminder Singh(Asst Prof)</option>
+                <option value="Dr. Preetpal Kaur Buttar(Asst Prof)">
+                    Dr. Preetpal Kaur Buttar(Asst Prof)</option>
+                <option value="Dr. Tajinder Singh(Asst Prof)">
+                    Dr. Tajinder Singh(Asst Prof)</option>
+                <option value="Dr. Utkarsh">
+                    Dr. Utkarsh</option>
+                <option value="Dr. VINOD KUMAR VERMA(Asst Prof)">Dr. VINOD KUMAR VERMA(Asst Prof)</option>
+                <option value="Jaspal Singh(Asst Prof)">
+                    Jaspal Singh(Asst Prof)</option>
+                <option value="Rahul Gautam(Asst Prof)">
+                    Rahul Gautam(Asst Prof)</option>
+                <option value="Dr. Jatinder Pal Singh(Asst Prof)">Dr. Jatinder Pal Singh(Asst Prof)</option>
+                <option value="Sukhpreet Singh(Asst Prof)">
+                    Sukhpreet Singh(Asst Prof)</option>
+                <option value="Abhishek(Guest)">
+                    Abhishek(Guest)</option>
+                <option value="Chinu(Guest)">
+                    Chinu(Guest)</option>
+                <option value="Dr. Vikash Kumar Garg(Guest)">
+                    Dr. Vikash Kumar Garg(Guest)</option>
+                <option value="Harpreet Singh(Guest)">
+                    Harpreet Singh(Guest)</option>
+                <option value="Sakshi Bansal(Guest)">
+                    Sakshi Bansal(Guest)</option>
+                <option value="Sunita Rani(Guest)">
+                    Sunita Rani(Guest)</option>(Prof)
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="session-date">Session Date</label>
+              <input type="date" id="session-date" required>
+            </div>
+            <div class="form-group">
+              <label for="session-time">Session Time</label>
+              <input type="time" id="session-time" required>
+            </div>
+            <button type="submit" class="btn">Book Session</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 SLIET Mentorship Platform. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
