@@ -266,6 +266,10 @@ footer {
   color: #999;
 }
 
+#register {
+  margin-top: 20px;
+}
+
 /* General styles for reviews and feedback sections */
 #reviews, #feedback {
   margin: 20px 0;
@@ -277,6 +281,13 @@ footer {
 #reviews h2, #feedback h2 {
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.btn-container{
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {

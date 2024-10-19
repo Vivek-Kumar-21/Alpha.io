@@ -277,34 +277,35 @@
         <section id="login">
             <h2>Login</h2>
             <form id="login-form">
-                <div>
+                <div class="form-group">
                     <label for="login-email">Email:</label>
                     <input type="email" id="login-email" required>
                 </div>
-                <div>
+                <div  class="form-group">
                     <label for="login-password">Password:</label>
                     <input type="password" id="login-password" required>
                 </div>  
-                <button type="submit" class="btn">Login</button>
+                <div class="btn-container"> <button type="submit" class="btn">Login</button></div>
             </form>
         </section>
 
         <section id="register">
             <h2>Register</h2>
             <form id="register-form">
-                <div>
+                <div  class="form-group">
                     <label for="register-name">Name:</label>
                     <input type="text" id="register-name" required>
                 </div>
-                <div>
+                <div  class="form-group">
                     <label for="register-email">Email:</label>
                     <input type="email" id="register-email" required>
                 </div>
-                <div>
+                <div >
+                <div  class="form-group" >
                     <label for="register-password">Password:</label>
                     <input type="password" id="register-password" required>
                 </div>
-                <button type="submit" class="btn">Register</button>
+                <div class="btn-container"> <button type="submit" class="btn">Register</button></div>
             </form>
         </section>
 
@@ -320,7 +321,7 @@
                     <label for="review-text">Your Review</label>
                     <textarea id="review-text" required></textarea>
                 </div>
-                <button type="submit" class="btn">Submit Review</button>
+                <div class="btn-container"> <button type="submit" class="btn">Submit Review</button></div>
             </form>
             <div id="review-list"></div>
         </section>
@@ -333,7 +334,7 @@
                     <label for="feedback-text">Your Feedback</label>
                     <textarea id="feedback-text" required></textarea>
                 </div>
-                <button type="submit" class="btn">Submit Feedback</button>
+                <div class="btn-container"> <button type="submit" class="btn">Submit Feedback</button></div>
             </form>
             <div id="feedback-list"></div>
         </section>
