@@ -38,7 +38,7 @@ header {
 }
 
 .logo-img {
-  width: 40px; 
+  width: 60px; 
   height: auto; 
   margin-right: 8px;
 }
@@ -156,7 +156,7 @@ h1 {
 .mentor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .mentor-card {
