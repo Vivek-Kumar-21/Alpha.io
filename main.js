@@ -4,33 +4,79 @@ import './style.css';
 // Mock data for mentors
 const mentors = [
     {
-        id: 1,
-        name: "Dr. Anita Sharma",
-        expertise: "Computer Science",
+        name: "Dr. John Doe",
         experience: "15 years",
-        specialties: ["Artificial Intelligence", "Machine Learning", "Data Structures"],
-        availableSlots: ["2024-10-18", "2024-10-19"],
-        image: "https://source.unsplash.com/random/300x300/?professor,woman"
+        specialty: "Machine Learning",
+        availability: "Monday - Friday"
     },
     {
-        id: 2,
-        name: "Prof. Rajesh Kumar",
-        expertise: "Mechanical Engineering",
-        experience: "20 years",
-        specialties: ["Thermodynamics", "Fluid Mechanics", "CAD/CAM"],
-        availableSlots: ["2024-10-19", "2024-10-20"],
-        image: "https://source.unsplash.com/random/300x300/?professor,man"
+        name: "Prof. Jane Smith",
+        experience: "10 years",
+        specialty: "Web Development",
+        availability: "Monday - Wednesday"
     },
     {
-        id: 3,
-        name: "Dr. Priya Gupta",
-        expertise: "Electrical Engineering",
-        experience: "12 years",
-        specialties: ["Power Systems", "Control Systems", "Renewable Energy"],
-        availableSlots: ["2024-10-18", "2024-10-20"],
-        image: "https://source.unsplash.com/random/300x300/?engineer,woman"
+        name: "Dr. Sam Williams",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
+    },
+    {
+        name: "Dr. Ram",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
+    },
+    {
+        name: "Dr. Honey Singh",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
+    },
+    {
+        name: "Dr. Krishna",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
+    },
+    {
+        name: "Dr. Arjun",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
+    },
+    {
+        name: "Dr. Williams",
+        experience: "8 years",
+        specialty: "Data Science",
+        availability: "Tuesday - Thursday"
     }
 ];
+
+// Function to render mentors
+function renderMentors() {
+    const mentorGrid = document.getElementById('mentor-grid');
+
+    mentors.forEach(mentor => {
+        const mentorBox = document.createElement('div');
+        mentorBox.className = 'mentor-box';
+        
+        mentorBox.innerHTML = `
+            <h3>${mentor.name}</h3>
+            <p><strong>Experience:</strong> ${mentor.experience}</p>
+            <p><strong>Specialty:</strong> ${mentor.specialty}</p>
+            <p><strong>Availability:</strong> ${mentor.availability}</p>
+            <button class="choose-mentor-btn">Choose Your Mentor</button>
+        `;
+        
+        mentorGrid.appendChild(mentorBox);
+    });
+}
+
+// Call the function to render mentors on page load
+document.addEventListener('DOMContentLoaded', renderMentors);
+
+
 
 // Testimonials data
 const testimonials = [

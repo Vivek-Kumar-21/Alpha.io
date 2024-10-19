@@ -112,6 +112,41 @@ h1 {
   justify-content: center;
   text-align: center;
 }
+.mentors-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.mentor-box {
+  background-color: #34495ef3;  /* Inner box color */
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;  /* Box border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #ffffff; /* Text color to ensure readability on dark background */
+}
+
+.mentor-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mentor-box h3 {
+  font-size: 1.2em;
+  color: #ffffff;  /* Heading color */
+}
+
+.mentor-box p {
+  font-size: 0.9em;
+  color: #ffffff;  /* Paragraph text color */
+}
+
 
 .mentors {
   padding: 4rem 0;
